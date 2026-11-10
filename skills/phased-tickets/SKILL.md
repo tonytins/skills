@@ -25,6 +25,8 @@ Check for a roadmap, usually in `docs`. If this change is on it, plan the phases
 
 Look for prefactoring that makes the real change easier. "Make the change easy, then make the easy change." Prefactoring belongs in its own ticket, before the work it unblocks.
 
+Run the test suite once before drafting. If it is already red, say so up front and pick one: fix the baseline first as its own ticket, or agree that "tests pass" means "no new failures" for this rollout. Otherwise the first phase's checkpoint is a lie, and the rollout starts by inheriting a failure nobody chose.
+
 ### 3. Draft the phases
 
 Aim for three to five phases, each with a one-line label:
@@ -38,7 +40,7 @@ Phase 4: Cleanup and tests
 
 Name them plainly and use one scheme for the whole rollout. Do not mix letters and numbers within a plan.
 
-Start with scaffolding: the files, interfaces, types, config, or stubs that later phases build against. Skipping straight to real logic tends to force rework once a second or third piece reveals the structure needed a different shape. Only scaffold what a later phase in this plan will use. If there is no structure to set up, such as a rename or a removal, say so and start with the first real step.
+Start with scaffolding: the files, interfaces, types, config, or stubs that later phases build against. Skipping straight to real logic tends to force rework once a second or third piece reveals the structure needed a different shape. Only scaffold what a later phase in this plan will use. If there is no structure to set up, such as a removal, say so and start with the first real step. A rename is the exception: it is usually a wide refactor, and its expand step is the scaffolding, so it still comes first.
 
 Phase a change when landing it in one shot would be hard to review or hard to undo: it touches many files or several systems, it has a natural dependency order, or a partial version is still safe to leave in place.
 
@@ -119,6 +121,8 @@ Finish each phase before starting the next:
 3. Report the commit, what was checked, what was not, and any risks.
 4. Update the checklist in the plan file and include that update in the same commit.
 5. Show the updated checklist and wait for a go-ahead before the next phase, unless the user asked to run several through.
+
+When the change needs no phases, do the work and commit it as one coherent commit, then report it the same way. The checklist and the go-ahead are for rollouts, not for a fix.
 
 Check the plan against `git log` when picking the work back up, since the code is the record of what actually landed. When the rollout finishes an entry on the roadmap, update that entry in the final phase's commit, even if the checklist lived in `stash.local`.
 
