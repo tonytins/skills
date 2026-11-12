@@ -1,0 +1,22 @@
+[
+  {"query": "I just ran a playtest of my roguelike. Six of eight players quit in the first biome. Notes say the game is 'exhausting', the run back to the boss is too long, and losing all gold on death feels pointless. I don't want to just lower enemy damage. Where do I start?", "should_trigger": true},
+  {"query": "Review the first hour of my action game for frustration. Players replay a 90-second approach after every boss death, the shop is three menus deep, and they don't understand why some attacks do zero damage.", "should_trigger": true},
+  {"query": "I'm building a boss-heavy action game in Godot. I need checkpoints, a retry flow that restores the right state, and a way to avoid saving players into a dead end. Help me design the state model and test plan.", "should_trigger": true},
+  {"query": "Our card game has a duplicate-rare problem: players see the same card five times in a row and say the RNG is rigged. I also want a pity system that doesn't feel like a slot machine. How should I design and tune it?", "should_trigger": true},
+  {"query": "Players can softlock themselves by using a key on the wrong door, or by spending their last resource before a gate. I need detection, an escape hatch, and a way to log these states for fixes.", "should_trigger": true},
+  {"query": "I need to add accessibility options to my action game before launch: colorblind-safe cues, text scaling, hold instead of mash, and adjustable game speed. Where do I start, and what are the common pitfalls?", "should_trigger": true},
+  {"query": "I want dynamic difficulty that helps players who keep dying without punishing them for doing well. I'm worried about rubber-banding, and I need it to be testable. How should I design it?", "should_trigger": true},
+  {"query": "My co-op game lets one player hold the group hostage in menus, go AFK during turns, and grief the loot rules. What anti-griefing, AFK, and catch-up patterns should I use?", "should_trigger": true},
+  {"query": "The inventory in my farming sim is tedious: players walk back and forth, open three menus to craft, and accidentally sell locked items. Review the flow and propose quality-of-life fixes I can ship.", "should_trigger": true},
+  {"query": "I want to add a hint system to my puzzle game but I don't want to spoil the solution. I need escalating hints, a way to test whether they work, and an opt-out for purists. How should I design it?", "should_trigger": true},
+  {"query": "How do I serialize player position and inventory to JSON in Unity? I need a save system.", "should_trigger": false},
+  {"query": "Can you review this C# health bar script? It doesn't update when the player takes damage.", "should_trigger": false},
+  {"query": "How do I make my boss fight harder? Playtesters say it's too easy.", "should_trigger": false},
+  {"query": "What are good puzzle design principles for a Zelda-like dungeon?", "should_trigger": false},
+  {"query": "I'm making a horror game and want players to feel vulnerable. How do I tune resource scarcity?", "should_trigger": false},
+  {"query": "How do I add Steam achievements and a leaderboard to my game?", "should_trigger": false},
+  {"query": "My game's economy is broken and players have too much gold. How should I rebalance shop prices?", "should_trigger": false},
+  {"query": "How do I optimize Unity scene loading time? The first level takes 40 seconds to load.", "should_trigger": false},
+  {"query": "I'm making a rage game on purpose. How do I make the traps feel unfair but funny?", "should_trigger": false},
+  {"query": "How do I implement a branching dialogue tree with choices in Godot?", "should_trigger": false}
+]
